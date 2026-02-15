@@ -1,0 +1,18 @@
+<configuration>
+
+    <appender name="STDERR" class="ch.qos.logback.core.ConsoleAppender">
+        <target>System.err</target>
+        <encoder>
+            <pattern>[%thread] %-5level %logger - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- default level -->
+    <root level="INFO">
+        <appender-ref ref="STDERR"/>
+    </root>
+
+    <!-- show debug for our app -->
+    <logger name="topwords" level="DEBUG"/>
+
+</configuration>
